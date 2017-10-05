@@ -1,8 +1,6 @@
-class Users::OmniauthCallbacksController < ApplicationController
-    #layout 'admin'
-  
+class Users::OmniauthCallbacksController < ApplicationController 
     def facebook
-     raise params.to_yaml
+     raise request.env["onmiauth.auth"].to_yaml
     end
   end
   
