@@ -40,6 +40,7 @@ gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'b
 gem 'paperclip', '~> 5.1'
 gem 'omniauth-facebook'
 gem 'certified'
+gem 'haml-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
