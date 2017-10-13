@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
- 
-  
+   
   devise_for :users, controllers:{
     omniauth_callbacks: "users/omniauth_callbacks"
   }
@@ -8,5 +7,12 @@ Rails.application.routes.draw do
   post "/custom_sign_up", to: "users/omniauth_callbacks#custom_sign_up" 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-   root 'welcome#index'
+
+  authenticated :user do
+    root 'main#home'
+  end
+
+  unauthenticated :user do
+    root 'main#unregistered'
+  end
 end

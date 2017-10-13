@@ -41,6 +41,7 @@ gem 'paperclip', '~> 5.1'
 gem 'omniauth-facebook'
 gem 'certified'
 gem 'haml-rails'
+gem 'flexbox_rb'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

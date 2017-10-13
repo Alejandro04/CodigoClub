@@ -69,6 +69,7 @@ GEM
     execjs (2.7.0)
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
+    flexbox_rb (0.2.7.1)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     haml (5.0.1)
@@ -214,6 +215,7 @@ DEPENDENCIES
   certified
   coffee-rails (~> 4.2)
   devise
+  flexbox_rb
   haml-rails
   jbuilder (~> 2.5)
   jquery-rails
