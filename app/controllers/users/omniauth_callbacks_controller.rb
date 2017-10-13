@@ -21,6 +21,11 @@ class Users::OmniauthCallbacksController < ApplicationController
         render :edit
       end
     end
+
+    #Deberia funcionar cuando existe un error al loguearse, este metodo lanza el mensaje en el layout
+    def failure
+      redirect_to new_user_session_path, notice: "Error al intentar abrir sesion"
+    end
     
     private
 		def user_params
