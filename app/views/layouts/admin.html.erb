@@ -1,46 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Codigo Club</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-
-
-  <!-- Styles -->
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-  <!-- Fonts -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-
-  <!-- iCheck -->
-
-  <style media="screen">
-    .skin-blue.sidebar-mini{
-      margin: 0px;
-    }
-  </style>
-
-</head>
-<body>
-
-<% if user_signed_in? %>
-  <div class="pull-left">
-    <%= link_to 'Editar perfil', edit_user_registration_path, :class => 'btn btn-default btn-flat' %>
-  </div>
-  <div class="pull-right">
-    <%= link_to "Salir", destroy_user_session_path, method: :delete, :class => 'btn btn-default btn-flat'  %>
-  </div>
-<% end %>
-
-
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Codigo Club</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <div class="overflow-control">
+      <div class="main-container">
+        <div class="lateral-menu">
+          <li><a href="/posts">Posts</a></li>
+          <li>Salir</li>
+        </div>
+        <div class="content">
+          <nav class="nav">
+            <div class="button-nav">
+              <button type="button" class="tcon toggle-menu tcon-menu--arrow tcon-menu--arrow360left" aria-label="toggle menu">
+                <span class="tcon-menu__lines" aria-hidden="true"></span>
+                <span class="tcon-visuallyhidden">toggle menu</span>
+              </button>
+            </div>      
+          </nav>
+           <%= yield %>
+        </div>
+      </div>
+    </div>
+    <script src="./transformicons.js"></script>
+    <script src="./main.js"></script>
+  </body>
 </html>

@@ -13,6 +13,8 @@
  *= require colors
  *= require common
  *= require main
+ *= require style
+ *= require transformicons
  *= require_tree .
  *= require_self
  */

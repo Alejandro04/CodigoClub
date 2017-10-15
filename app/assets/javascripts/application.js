@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require bootstrap
-//= require jquery-2.2.3.min
-//= require app.min
+//= require transformicons
+//= require main
 //= require turbolinks
 //= require_tree .
