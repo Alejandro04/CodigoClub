@@ -14,5 +14,4 @@
 //= require bootstrap
 //= require transformicons
 //= require main
-//= require turbolinks
 //= require_tree .
