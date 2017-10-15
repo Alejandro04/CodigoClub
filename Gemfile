@@ -43,6 +43,13 @@ gem 'certified'
 gem 'haml-rails'
 gem 'flexbox_rb'
 
+#AASM para state machines
+gem "aasm"
+#Activemodel serializers xml to work with draper
+gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
+#Draper para nuestros decorators
+gem "draper",github:"audionerd/draper",branch:"rails5"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

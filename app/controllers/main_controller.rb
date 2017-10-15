@@ -1,7 +1,9 @@
 class MainController < ApplicationController
     
     def home
-      render plain: "Sesion Iniciada"
+      #render plain: "Sesion Iniciada"
+      @post = Post.new
+      @posts = Post.all
     end
   
     def unregistered
