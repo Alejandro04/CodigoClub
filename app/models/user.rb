@@ -11,7 +11,7 @@ class User < ApplicationRecord
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
   has_attached_file :cover, styles: { medium: "800x600>", thumb: "400x300>" }, default_url: "/images/:style/missing_cover.jpg"
-  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
+  validates_attachment_content_type :cover, content_type: /\Aimage\/.*\z/
   
   def self.from_omniauth(auth)
   	where(provider: auth[:provider], uid:auth[:uid]).first_or_create do |user|
